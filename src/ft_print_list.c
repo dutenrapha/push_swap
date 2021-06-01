@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 22:56:01 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/05/29 23:45:37 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/06/01 00:54:34 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_print_list(t_stack *n)
 {
 	while (n != NULL) {
-		printf("%d\n", n->data);
+		ft_printf("%d\n", n->data);
 		n = n->next;
 	}
 }

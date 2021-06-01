@@ -6,13 +6,12 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 21:50:19 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/05/30 03:05:35 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/06/01 03:09:18 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-// int main(void)
 int main(int argc, char *argv[ ])
 {
 	t_solution	*s;
@@ -20,10 +19,6 @@ int main(int argc, char *argv[ ])
 
 	a = NULL;
 	a = ft_init_stack(argc, argv);
-	s = ft_insertion_sort(a, argc - 1);
-	while (s != NULL)
-	{
-		printf("%s\n",s->step);
-		s = s->next;
-	}
+	ft_insertion_sort(&s, a, argc - 1);
+	ft_print_sol(s);
 }

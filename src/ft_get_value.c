@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_insertion_sort.c                                :+:      :+:    :+:   */
+/*   ft_get_value.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/30 01:00:08 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/01 03:09:43 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/06/01 01:43:53 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/06/01 01:48:02 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-void	ft_insertion_sort(t_solution **s, t_stack *a, int len)
+int	ft_get_value(t_stack *s, int position)
 {
-	int			i;
-	int			j;
+	int	resp;
+	int	i;
 
-	i = 1;
-	*s = NULL;
-	while (i < len)
+	i = 0;
+	while (s != NULL)
 	{
-		j = i;
-		while (j > 0 && ft_get_value(a, j - 1) > ft_get_value(a, j))
+		if (i == position)
 		{
-			sawp(s, &a, j);
-			j--;
+			resp = s->data;
+			break;
 		}
 		i++;
+		s = s->next;
 	}
-	// ft_print_list(a);
-	// ft_printf("\n");
+	return (resp);
 }

@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_insertion_sort.c                                :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/30 01:00:08 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/01 03:09:43 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/06/01 02:11:48 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/06/01 02:52:16 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-void	ft_insertion_sort(t_solution **s, t_stack *a, int len)
+void	sawp(t_solution **s, t_stack **a, int position)
 {
-	int			i;
-	int			j;
+	int		i;
+	t_stack	*b;
 
-	i = 1;
-	*s = NULL;
-	while (i < len)
+	b = NULL;
+	i = 0;
+	while (i < position - 1)
 	{
-		j = i;
-		while (j > 0 && ft_get_value(a, j - 1) > ft_get_value(a, j))
-		{
-			sawp(s, &a, j);
-			j--;
-		}
+		ft_push(&b, a);
+		ft_add_solution(s,"pb");
 		i++;
 	}
-	// ft_print_list(a);
-	// ft_printf("\n");
+	ft_swap(a);
+	ft_add_solution(s,"sa");
+	i = 0;
+	while (i < position - 1)
+	{
+		ft_push(a, &b);
+		ft_add_solution(s,"pa");
+		i++;
+	}
 }
