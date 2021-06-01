@@ -6,7 +6,7 @@
 #    By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/27 12:40:11 by rdutenke          #+#    #+#              #
-#    Updated: 2021/05/29 21:30:06 by rdutenke         ###   ########.fr        #
+#    Updated: 2021/06/01 16:41:09 by rdutenke         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ FUNCTIONS = ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memcmp.c\
 		ft_flag_zeros.c ft_flag_none.c ft_flag_asterisk.c ft_set_conversion.c ft_check_precision.c\
 		ft_flag_precision.c ft_putchar_fd.c ft_strlen.c ft_calloc.c ft_substr.c ft_atoi.c ft_strchr.c \
 		ft_putstr_fd.c ft_strdup.c ft_memset.c ft_strjoin.c ft_itoa.c ft_strrchr.c ft_isdigit.c ft_print_padding.c get_next_line.c\
+		ft_split_free.c \
 
 FUNCTIONS_O = $(subst .c,.o,$(FUNCTIONS))
 

@@ -1,49 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_stack.c                                    :+:      :+:    :+:   */
+/*   ft_split_size.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 23:47:33 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/01 17:44:35 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/06/01 16:44:48 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/06/01 16:51:01 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-static void	ft_aux(t_stack	**s, char *str)
+int	ft_split_size(char **split)
 {
-	char	**list;
-	int		size;
 	int		i;
 
 	i = 0;
-	list = ft_split(str, ' ');
-	size = ft_split_size(list);
-	while (i < size)
+	while (split[i] != NULL)
 	{
-		ft_add_back(s, ft_atoi(list[i]));
 		i++;
 	}
-}
-
-t_stack	*ft_init_stack(int argc, char *argv[ ])
-{
-	t_stack *a;
-	int i;
-
-	a = NULL;
-	if (argc == 2)
-		ft_aux(&a,argv[1]);
-	else
-	{
-		i = 2;
-		while (i < argc)
-		{
-			ft_add_back(&a, ft_atoi(argv[i]));
-			i++;
-		}
-	}
-	return (a);
+	return (i);
 }

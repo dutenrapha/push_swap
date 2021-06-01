@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_insertion_sort.c                                :+:      :+:    :+:   */
+/*   ft_split_free.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/30 01:00:08 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/01 17:50:15 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/04/17 02:05:59 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/06/01 16:43:20 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "libft.h"
 
-void	ft_insertion_sort(t_solution **s, t_stack *a, int len)
+void	ft_split_free(char ***split)
 {
-	int			i;
-	int			j;
+	char	**temp;
+	int		i;
 
-	i = 1;
-	*s = NULL;
-	while (i < len)
+	i = 0;
+	temp = *split;
+	while (temp[i] != NULL)
 	{
-		j = i;
-		while (j > 0 && ft_get_value(a, j - 1) > ft_get_value(a, j))
-		{
-			sawp(s, &a, j);
-			j--;
-		}
+		free(temp[i]);
+		temp[i] = NULL;
 		i++;
 	}
-	//ft_print_list(a);
-	// ft_printf("\n");
+	free(temp);
+	temp = NULL;
 }

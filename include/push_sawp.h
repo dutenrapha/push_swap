@@ -29,5 +29,5 @@ int			ft_get_value(t_stack *s, int position);
 void		ft_insertion_sort(t_solution **s, t_stack *a, int len);
 void		ft_print_sol(t_solution *n);
 void		sawp(t_solution **s, t_stack **a, int position);
-
+int			ft_split_size(char **split);
 #endif

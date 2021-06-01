@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 21:50:19 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/01 03:09:18 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/06/01 17:50:02 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int main(int argc, char *argv[ ])
 
 	a = NULL;
 	a = ft_init_stack(argc, argv);
-	ft_insertion_sort(&s, a, argc - 1);
+
+	ft_insertion_sort(&s, a, ft_lstlen(a));
 	ft_print_sol(s);
+	//TODO free a and s lists
 }
