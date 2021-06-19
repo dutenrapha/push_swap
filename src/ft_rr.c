@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_rr.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 21:50:19 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/19 03:26:04 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/06/18 02:56:53 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/06/18 03:30:22 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-int main(int argc, char *argv[ ])
+void	ft_rr(t_stack **head)
 {
-	t_solution	*s;
-	t_stack	*a;
+	t_stack	*n;
+	int		temp;
+	int		point;
 
-	a = NULL;
-	s = NULL;
-	a = ft_init_stack(argc, argv);
-
-	ft_insertion_sort(&s, a, ft_lstlen(a));
-	//ft_quick_sort(&s, &a, 0, ft_lstlen(a) - 1);
-	ft_print_sol(s);
-	//TODO free a and s lists
+	point = ft_get_value(*head, ft_lstlen(*head) - 1);
+	n = *head;
+	while (n != NULL)
+	{
+		temp = n->data;
+		n->data = point;
+		point = temp;
+		n = n->next;
+	}
 }

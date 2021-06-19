@@ -30,4 +30,8 @@ void		ft_insertion_sort(t_solution **s, t_stack *a, int len);
 void		ft_print_sol(t_solution *n);
 void		sawp(t_solution **s, t_stack **a, int position);
 int			ft_split_size(char **split);
+void		ft_quick_sort(t_solution **s, t_stack **a, int init, int end);
+void		sawp_quick(t_solution **s, t_stack **a, int i, int j);
+void		ft_rr(t_stack **head);
+void		ft_r(t_stack **head);
 #endif
