@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/18 02:56:53 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/18 03:30:22 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/06/20 03:00:14 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,18 @@ void	ft_rr(t_stack **head)
 		point = temp;
 		n = n->next;
 	}
+}
+
+int	ft_rr_x(t_solution **s, t_stack **x, int i, char *step)
+{
+	int	j;
+
+	j = 0;
+	while (j < i)
+	{
+		ft_rr(x);
+		ft_add_solution(s, step);
+		j++;
+	}
+	return (j);
 }

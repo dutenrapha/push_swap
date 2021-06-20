@@ -1,49 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_stack.c                                    :+:      :+:    :+:   */
+/*   ft_get_index.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 23:47:33 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/20 04:04:15 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/06/20 01:39:55 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/06/20 01:42:35 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-static void	ft_aux(t_stack	**s, char *str)
+int	ft_get_index(t_stack *s, int value)
 {
-	char	**list;
-	int		size;
-	int		i;
+	int	position;
+	int	i;
 
 	i = 0;
-	list = ft_split(str, ' ');
-	size = ft_split_size(list);
-	while (i < size)
+	position = - 1;
+	while (s != NULL)
 	{
-		ft_add_back(s, ft_atoi(list[i]));
-		i++;
-	}
-}
-
-t_stack	*ft_init_stack(int argc, char *argv[ ])
-{
-	t_stack *a;
-	int i;
-
-	a = NULL;
-	if (argc == 2)
-		ft_aux(&a,argv[1]);
-	else
-	{
-		i = 1;
-		while (i < argc)
+		if (s->data == value)
 		{
-			ft_add_back(&a, ft_atoi(argv[i]));
-			i++;
+			position = i;
+			break;
 		}
+		i++;
+		s = s->next;
 	}
-	return (a);
+	return (position);
 }

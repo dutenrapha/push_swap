@@ -2,6 +2,7 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
+# include <stdbool.h>
 # include "../libft/libft.h"
 
 typedef struct s_stack {
@@ -33,5 +34,8 @@ int			ft_split_size(char **split);
 void		ft_quick_sort(t_solution **s, t_stack **a, int init, int end);
 void		sawp_quick(t_solution **s, t_stack **a, int i, int j);
 void		ft_rr(t_stack **head);
+int			ft_rr_x(t_solution **s, t_stack **x, int i, char *step);
 void		ft_r(t_stack **head);
+int			ft_r_x(t_solution **s, t_stack **x, int i, char *step);
+int			ft_get_index(t_stack *s, int value);
 #endif
