@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 01:14:22 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/05/30 01:31:40 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:31:09 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ void	ft_delete_first(t_stack	**s)
 		free(to_delete);
 	}
 }
-

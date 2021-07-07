@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 01:43:53 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/01 01:48:02 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:32:08 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_get_value(t_stack *s, int position)
 		if (i == position)
 		{
 			resp = s->data;
-			break;
+			break ;
 		}
 		i++;
 		s = s->next;

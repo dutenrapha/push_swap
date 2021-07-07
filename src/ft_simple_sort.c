@@ -6,20 +6,20 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 19:34:02 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/05 20:51:57 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:38:21 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-static void ft_simple_swap(t_stack **a, int i, int j)
+static void	ft_simple_swap(t_stack **a, int i, int j)
 {
-	int	temp;
-	int	k;
-	t_stack *n;
+	int		temp;
+	int		k;
+	t_stack	*n;
 
 	if (i == j)
-		return;
+		return ;
 	temp = ft_get_value(*a, i);
 	n = *a;
 	k = 0;
@@ -39,7 +39,7 @@ static void ft_simple_swap(t_stack **a, int i, int j)
 	n->data = temp;
 }
 
-static int partition(t_stack **a, int init, int end)
+static int	partition(t_stack **a, int init, int end)
 {
 	int	pivot;
 	int	i;
@@ -63,8 +63,8 @@ static int partition(t_stack **a, int init, int end)
 
 void	ft_simple_sort(t_stack *a, int init, int end)
 {
-	int	p;
-	t_stack *b;
+	int		p;
+	t_stack	*b;
 
 	b = a;
 	if (init < end)

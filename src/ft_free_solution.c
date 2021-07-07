@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_index.c                                     :+:      :+:    :+:   */
+/*   ft_free_solution.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/20 01:39:55 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/20 01:42:35 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/07/07 21:21:03 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/07/07 21:31:18 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-int	ft_get_index(t_stack *s, int value)
+void	ft_free_solution(t_solution **s)
 {
-	int	position;
-	int	i;
+	t_solution	*to_delete;
 
-	i = 0;
-	position = - 1;
-	while (s != NULL)
+	while (*s != NULL)
 	{
-		if (s->data == value)
-		{
-			position = i;
-			break;
-		}
-		i++;
-		s = s->next;
+		to_delete = *s;
+		*s = (*s)->next;
+		free(to_delete);
 	}
-	return (position);
 }

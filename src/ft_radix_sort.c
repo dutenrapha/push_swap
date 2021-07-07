@@ -6,13 +6,13 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 19:07:31 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 20:12:06 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:54:15 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-static int ft_maxbits(int max_num)
+static int	ft_maxbits(int max_num)
 {
 	int	max_bits;
 
@@ -24,42 +24,48 @@ static int ft_maxbits(int max_num)
 	return (max_bits);
 }
 
+static void	ft_init(t_stack **b, int *size, int *max_bits, t_stack *a)
+{
+	*b = NULL;
+	*size = ft_lstlen(a);
+	*max_bits = ft_maxbits(*size - 1);
+}
+
+static void	ft_evaluate(t_solution **s, t_stack **a, t_stack **b, int i)
+{
+	if (((ft_get_value(*a, 0) >> i) & 1) == 1)
+	{
+		ft_r(a);
+		ft_add_solution(s, "ra");
+	}
+	else
+	{
+		ft_push(b, a);
+		ft_add_solution(s, "pb");
+	}
+}
+
 void	ft_radix_sort(t_solution **s, t_stack **a)
 {
-	int	max_bits;
-	int	i;
-	int	j;
-	int	size;
-	int	num;
+	int		max_bits;
+	int		i;
+	int		j;
+	int		size;
 	t_stack	*b;
 
-	b = NULL;
-	size = ft_lstlen(*a);
-	max_bits = ft_maxbits(size - 1);
-	i = 0;
-	while (i < max_bits)
+	ft_init(&b, &size, &max_bits, *a);
+	i = -1;
+	while (++i < max_bits)
 	{
-		j = 0;
-		while (j < size)
+		j = -1;
+		while (++j < size)
 		{
-			num = ft_get_value(*a, 0);
-			if (((num >> i) & 1) == 1)
-			{
-				ft_r(a);
-				ft_add_solution(s,"ra");
-			}
-			else
-			{
-				ft_push(&b, a);
-				ft_add_solution(s,"pb");
-			}
-			j++;
+			ft_evaluate(s, a, &b, i);
 		}
-		i++;
 		while (ft_lstlen(b) != 0)
 		{
 			ft_push(a, &b);
-			ft_add_solution(s,"pa");
+			ft_add_solution(s, "pa");
 		}
 	}
 }

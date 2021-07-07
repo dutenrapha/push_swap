@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 23:06:43 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/05/30 01:55:33 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:30:42 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_add_back(t_stack **head, int data)
 {
-	t_stack *n;
-	t_stack *add;
+	t_stack	*n;
+	t_stack	*add;
 
 	if (*head == NULL)
 	{

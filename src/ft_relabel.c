@@ -6,13 +6,13 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:27:46 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/05 20:54:32 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 21:36:44 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-void ft_relabel(t_stack **a,t_stack *b)
+void	ft_relabel(t_stack **a, t_stack *b)
 {
 	int	i;
 	int	j;
@@ -29,7 +29,7 @@ void ft_relabel(t_stack **a,t_stack *b)
 			if (ft_get_value(*a, i) == ft_get_value(b, j))
 			{
 				ft_set_value(a, i, j);
-				break;
+				break ;
 			}
 			j++;
 		}
