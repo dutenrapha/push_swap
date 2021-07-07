@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 21:50:19 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:39:10 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:19:04 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 int	main(int argc, char *argv[ ])
 {

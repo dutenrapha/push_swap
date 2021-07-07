@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 02:04:22 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:37:01 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:18:41 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 void	ft_rotate(t_stack **head, int point)
 {

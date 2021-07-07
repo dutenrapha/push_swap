@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 18:39:50 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:33:20 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:17:55 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 bool	ft_is_sorted(t_stack **a)
 {

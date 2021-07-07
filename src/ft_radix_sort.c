@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 19:07:31 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:54:15 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:18:24 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 static int	ft_maxbits(int max_num)
 {

@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 23:47:33 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:32:57 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:17:45 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 static void	ft_aux(t_stack	**s, char *str)
 {

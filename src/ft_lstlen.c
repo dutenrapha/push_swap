@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 02:30:30 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:33:41 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:18:05 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 int	ft_lstlen(t_stack	*s)
 {

@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/29 23:06:43 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:30:42 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:16:51 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 void	ft_add_back(t_stack **head, int data)
 {

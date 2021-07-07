@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 20:27:46 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:36:44 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:18:36 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 void	ft_relabel(t_stack **a, t_stack *b)
 {

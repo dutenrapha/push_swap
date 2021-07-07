@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/05 19:34:02 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:38:21 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:18:55 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 static void	ft_simple_swap(t_stack **a, int i, int j)
 {

@@ -6,11 +6,11 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 02:42:03 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 21:30:59 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/07 22:17:13 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_sawp.h"
+#include "../include/push_swap.h"
 
 void	ft_add_solution(t_solution **head, char *step)
 {
