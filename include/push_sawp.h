@@ -5,14 +5,15 @@
 # include <stdbool.h>
 # include "../libft/libft.h"
 
-typedef struct s_stack {
-	int data;
-	struct s_stack* next;
+typedef struct	s_stack {
+	int		data;
+	struct	s_stack* next;
 } t_stack;
 
 typedef struct s_solution {
-	char *step;
-	struct s_solution* next;
+	char	*step;
+	int		next_to_sort;
+	struct	s_solution* next;
 } t_solution;
 
 void		ft_print_list(t_stack *n);
@@ -31,11 +32,19 @@ void		ft_insertion_sort(t_solution **s, t_stack *a, int len);
 void		ft_print_sol(t_solution *n);
 void		sawp(t_solution **s, t_stack **a, int position);
 int			ft_split_size(char **split);
-void		ft_quick_sort(t_solution **s, t_stack **a, int init, int end);
+void		ft_quick_sort(t_solution **s, t_stack **a, int end, int size);
 void		sawp_quick(t_solution **s, t_stack **a, int i, int j);
 void		ft_rr(t_stack **head);
 int			ft_rr_x(t_solution **s, t_stack **x, int i, char *step);
 void		ft_r(t_stack **head);
 int			ft_r_x(t_solution **s, t_stack **x, int i, char *step);
 int			ft_get_index(t_stack *s, int value);
+void		ft_push_a(t_solution **s, t_stack **a, t_stack **b, int i);
+void		ft_push_b(t_solution **s, t_stack **a, t_stack **b, int i);
+bool		ft_is_sorted(t_stack **a);
+void		ft_simple_sort(t_stack *a, int init, int end);
+void		ft_relabel(t_stack **a,t_stack *b);
+void		ft_set_value(t_stack **a, int position, int value);
+void		ft_heuristic(t_solution **s, t_stack **a);
+void		ft_radix_sort(t_solution **s, t_stack **a);
 #endif

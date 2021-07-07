@@ -1,45 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push.c                                          :+:      :+:    :+:   */
+/*   ft_relabel.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/30 01:09:32 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/20 20:58:25 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/07/05 20:27:46 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/07/05 20:54:32 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-void	ft_push(t_stack	**dst, t_stack	**src)
+void ft_relabel(t_stack **a,t_stack *b)
 {
-	ft_add_front(dst, (*src)->data);
-	ft_delete_first(src);
-}
-
-void	ft_push_a(t_solution **s, t_stack **a, t_stack **b, int i)
-{
+	int	i;
 	int	j;
+	int	size;
 
-	j = 0;
-	while (j < i)
+	ft_simple_sort(b, 0, ft_lstlen(b) - 1);
+	i = 0;
+	size = ft_lstlen(b);
+	while (i < size)
 	{
-		ft_push(a,b);
-		ft_add_solution(s, "pa");
-		j++;
-	}
-}
-
-void	ft_push_b(t_solution **s, t_stack **a, t_stack **b, int i)
-{
-	int	j;
-
-	j = 0;
-	while (j < i)
-	{
-		ft_push(a,b);
-		ft_add_solution(s, "pb");
-		j++;
+		j = 0;
+		while (j < size)
+		{
+			if (ft_get_value(*a, i) == ft_get_value(b, j))
+			{
+				ft_set_value(a, i, j);
+				break;
+			}
+			j++;
+		}
+		i++;
 	}
 }

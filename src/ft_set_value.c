@@ -1,45 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push.c                                          :+:      :+:    :+:   */
+/*   ft_set_value.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/30 01:09:32 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/20 20:58:25 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/07/05 20:48:14 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/07/05 20:52:24 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_sawp.h"
 
-void	ft_push(t_stack	**dst, t_stack	**src)
+void ft_set_value(t_stack **a, int position, int value)
 {
-	ft_add_front(dst, (*src)->data);
-	ft_delete_first(src);
-}
+	int		i;
+	t_stack	*n;
 
-void	ft_push_a(t_solution **s, t_stack **a, t_stack **b, int i)
-{
-	int	j;
-
-	j = 0;
-	while (j < i)
+	i = 0;
+	n = *a;
+	while (i < position)
 	{
-		ft_push(a,b);
-		ft_add_solution(s, "pa");
-		j++;
+		n = n->next;
+		i++;
 	}
-}
-
-void	ft_push_b(t_solution **s, t_stack **a, t_stack **b, int i)
-{
-	int	j;
-
-	j = 0;
-	while (j < i)
-	{
-		ft_push(a,b);
-		ft_add_solution(s, "pb");
-		j++;
-	}
+	n->data = value;
 }

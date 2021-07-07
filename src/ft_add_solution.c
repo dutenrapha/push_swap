@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/30 02:42:03 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/06/01 02:54:03 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/05 17:06:41 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	ft_add_solution(t_solution **head, char *step)
 	{
 		*head = (t_solution *)malloc(sizeof(t_solution));
 		(*head)->step = step;
+		(*head)->next_to_sort = 0;
 		(*head)->next = NULL;
 	}
 	else
