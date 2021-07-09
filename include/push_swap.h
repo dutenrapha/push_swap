@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 21:59:19 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/07 22:23:40 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/08 22:43:51 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,15 @@ void		ft_set_value(t_stack **a, int position, int value);
 void		ft_radix_sort(t_solution **s, t_stack **a);
 void		ft_free_stack(t_stack **a);
 void		ft_free_solution(t_solution **s);
+void		ft_sort_3(t_solution **s, t_stack **a);
+void		ft_sort_5(t_solution **s, t_stack **a);
+void		ft_swap(t_stack **s);
+void		ft_rr(t_stack **head);
+void		case1(t_solution **s, t_stack **a);
+void		case2(t_solution **s, t_stack **a);
+void		case3(t_solution **s, t_stack **a);
+void		case4(t_solution **s, t_stack **a);
+void		case5(t_solution **s, t_stack **a);
+bool		ft_is_sorted(t_stack **a);
+int			ft_get_index(t_stack *s, int value);
 #endif

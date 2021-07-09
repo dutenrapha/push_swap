@@ -1,49 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_stack.c                                    :+:      :+:    :+:   */
+/*   ft_sort_3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 23:47:33 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/08 23:58:37 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/07/08 19:50:48 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/07/08 21:18:10 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	ft_aux(t_stack	**s, char *str)
+void	ft_sort_3(t_solution **s, t_stack **a)
 {
-	char	**list;
-	int		size;
-	int		i;
-
-	i = 0;
-	list = ft_split(str, ' ');
-	size = ft_split_size(list);
-	while (i < size)
+	if (ft_is_sorted(a))
+		return ;
+	if (ft_get_value(*a, 0) > ft_get_value(*a, 1))
 	{
-		ft_add_back(s, ft_atoi(list[i]));
-		i++;
-	}
-}
-
-t_stack	*ft_init_stack(int argc, char *argv[ ])
-{
-	t_stack	*a;
-	int		i;
-
-	a = NULL;
-	if (argc == 2)
-		ft_aux(&a, argv[1]);
-	else
-	{
-		i = 1;
-		while (i < argc)
+		if (ft_get_value(*a, 1) > ft_get_value(*a, 2))
 		{
-			ft_add_back(&a, ft_atoi(argv[i]));
-			i++;
+			case2(s, a);
+		}
+		else
+		{
+			if (ft_get_value(*a, 2) > ft_get_value(*a, 0))
+				case1(s, a);
+			else
+				case3(s, a);
 		}
 	}
-	return (a);
+	else
+	{
+		if (ft_get_value(*a, 2) > ft_get_value(*a, 0))
+			case4(s, a);
+		else
+			case5(s, a);
+	}
 }

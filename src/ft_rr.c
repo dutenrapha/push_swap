@@ -1,49 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_stack.c                                    :+:      :+:    :+:   */
+/*   ft_rr.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/29 23:47:33 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/08 23:58:37 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/06/18 02:56:53 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/07/08 20:18:07 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-static void	ft_aux(t_stack	**s, char *str)
+void	ft_rr(t_stack **head)
 {
-	char	**list;
-	int		size;
-	int		i;
+	t_stack	*n;
+	int		temp;
+	int		point;
 
-	i = 0;
-	list = ft_split(str, ' ');
-	size = ft_split_size(list);
-	while (i < size)
+	point = ft_get_value(*head, ft_lstlen(*head) - 1);
+	n = *head;
+	while (n != NULL)
 	{
-		ft_add_back(s, ft_atoi(list[i]));
-		i++;
+		temp = n->data;
+		n->data = point;
+		point = temp;
+		n = n->next;
 	}
-}
-
-t_stack	*ft_init_stack(int argc, char *argv[ ])
-{
-	t_stack	*a;
-	int		i;
-
-	a = NULL;
-	if (argc == 2)
-		ft_aux(&a, argv[1]);
-	else
-	{
-		i = 1;
-		while (i < argc)
-		{
-			ft_add_back(&a, ft_atoi(argv[i]));
-			i++;
-		}
-	}
-	return (a);
 }
