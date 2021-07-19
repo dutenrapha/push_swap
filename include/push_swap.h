@@ -6,7 +6,7 @@
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 21:59:19 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/08 22:43:51 by rdutenke         ###   ########.fr       */
+/*   Updated: 2021/07/19 21:33:30 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_solution
 }t_solution;
 
 t_stack		*ft_lst_new(int data);
-t_stack		*ft_init_stack(int argc, char *argv[ ]);
+t_stack		*ft_init_stack(int argc, char *argv[ ], bool *error);
 void		ft_add_back(t_stack **head, int data);
 void		ft_add_front(t_stack **head, int data);
 void		ft_delete_first(t_stack	**s);
@@ -58,4 +58,6 @@ void		case4(t_solution **s, t_stack **a);
 void		case5(t_solution **s, t_stack **a);
 bool		ft_is_sorted(t_stack **a);
 int			ft_get_index(t_stack *s, int value);
+bool		ft_error_check(char *value);
+bool		ft_error_duplicate(t_stack *s, char *value);
 #endif

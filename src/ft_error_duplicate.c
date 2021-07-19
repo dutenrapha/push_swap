@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sorted.c                                     :+:      :+:    :+:   */
+/*   ft_error_duplicate.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdutenke <rdutenke@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 18:39:50 by rdutenke          #+#    #+#             */
-/*   Updated: 2021/07/19 16:30:51 by rdutenke         ###   ########.fr       */
+/*   Created: 2021/07/19 21:03:47 by rdutenke          #+#    #+#             */
+/*   Updated: 2021/07/19 21:58:19 by rdutenke         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-bool	ft_is_sorted(t_stack **a)
+bool	ft_error_duplicate(t_stack *s, char *value)
 {
+	int		duplicate;
 	t_stack	*n;
 
-	n = *a;
-	if (*a == NULL)
-		return (true);
-	while (n->next != NULL)
+	duplicate = 0;
+	n = s;
+	while (n != NULL)
 	{
-		if (n->data > n->next->data)
-			return (false);
+		if (n->data == ft_atoi(value))
+			duplicate++;
 		n = n->next;
 	}
-	return (true);
+	if (duplicate >= 1)
+		return (1);
+	return (0);
 }
